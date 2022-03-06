@@ -3,14 +3,13 @@ import s from "./Counter.module.css";
 
 type DisplayPropsType ={
     score: number
-    maxValue: number
 }
 
 const Display =(props: DisplayPropsType)=>{
 
 
     return(
-        <div className={props.score === props.maxValue ? s.displayOff : s.displayOn}>
+        <div className={props.score === 5 ? s.displayOff : s.displayOn}>
             {props.score}
         </div>
     )

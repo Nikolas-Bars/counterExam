@@ -8,8 +8,6 @@ type CounterPropsType = {
     setScore: (score: number)=> void
     onClickHandler:()=>void
     onClickResetHandler:()=>void
-    maxValue: number
-    startValue: number
 }
 
 
@@ -25,8 +23,8 @@ const Counter =(props: CounterPropsType)=>{
 
     return(
         <div className={s.counter}>
-            <Display maxValue={props.maxValue} score={props.score}/>
-            <Buttons startValue={props.startValue} maxValue={props.maxValue} score={props.score} onClickHandler={onClickHandler} onClickResetHandler={onClickResetHandler}/>
+            <Display score={props.score}/>
+            <Buttons score={props.score} onClickHandler={onClickHandler} onClickResetHandler={onClickResetHandler}/>
 
         </div>
     )
